@@ -2,6 +2,7 @@ package com.gzq.thread.stop;
 
 /**
  * interrupt调用后不会立马结束线程，但是会给予一个线程需要中断的标志。
+ * 
  * interrupted该方法会去判断线程是否中断，同时如果有中断的标志（例如，之前调用了interrupt方法）它将会清楚该标志状态。
  * isInterrupted该方法与interrupted刚好相反，它获取状态后并不会清楚状态标志。
  * @author GeYi

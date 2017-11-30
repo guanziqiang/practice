@@ -11,7 +11,7 @@ public class SuspendResume {
 		System.out.println("end");
 	}
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		final SuspendResume sResume = new SuspendResume();
 		Thread thread1 = new Thread() {
 			@Override
@@ -21,6 +21,7 @@ public class SuspendResume {
 		};
 		thread1.setName("a");
 		thread1.start();
+//		Thread.sleep(1000); 猜测：如果主线程不休眠，后面的resume总会在suspend之前执行。
 		Thread thread2 = new Thread() {
 			@Override
 			public void run() {
@@ -30,6 +31,7 @@ public class SuspendResume {
 		thread2.setName("d");
 		thread2.start();
 		thread1.resume();
+		System.out.println("main end");
 	}
 
 }
