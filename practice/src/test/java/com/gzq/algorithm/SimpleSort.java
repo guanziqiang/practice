@@ -6,24 +6,24 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
- * ¼òµ¥ÅÅĞò£ºÃ°Åİ¡¢Ñ¡Ôñ²åÈëÅÅĞòËã·¨µÄ²âÊÔ°¸Àı¡£
+ * ç®€å•æ’åºï¼šå†’æ³¡ã€é€‰æ‹©æ’å…¥æ’åºç®—æ³•çš„æµ‹è¯•æ¡ˆä¾‹ã€‚
  * @author GeYi
  *
  */
 public class SimpleSort {
-	//Í³Ò»²âÊÔÊı¾İ 
+	//ç»Ÿä¸€æµ‹è¯•æ•°æ® 
 	//{1,2,3,4,5,6,7,8,9,10,11,12}
 	//{12,11,10,9,8,7,6,5,4,3,2,1}
 	//{34,56,23,45,2,3,7,37,9,0,4,76}
 	private static final int[] array = {34,56,23,45,2,3,7,37,9,0,4,76};
 	
-//	´òÓ¡ĞèÒªÅÅĞòµÄÊı×é³¤¶È
+//	æ‰“å°éœ€è¦æ’åºçš„æ•°ç»„é•¿åº¦
 	@Before
 	public void before() {
 		System.out.println("array.length: "+array.length);
 	}
 	
-//	Ã°ÅİÅÅĞò²âÊÔ
+//	å†’æ³¡æ’åºæµ‹è¯•
 	@Test
 	public void testBubble() {
 		int[] blos = Arrays.copyOf(array, array.length);
@@ -41,12 +41,12 @@ public class SimpleSort {
 			}
 		}
 		
-		System.out.println("Ã°Åİ ×ÜµÄ±È½Ï´ÎÊı"+count);
-		System.out.println("Ã°Åİ ×ÜµÄÎ»ÖÃ½»»»´ÎÊı"+yidong);
-		System.out.println("Ã°ÅİÅÅĞòºóµÄÎ»ÖÃ"+Arrays.toString(blos));
+		System.out.println("å†’æ³¡ æ€»çš„æ¯”è¾ƒæ¬¡æ•°"+count);
+		System.out.println("å†’æ³¡ æ€»çš„ä½ç½®äº¤æ¢æ¬¡æ•°"+yidong);
+		System.out.println("å†’æ³¡æ’åºåçš„ä½ç½®"+Arrays.toString(blos));
 	}
 	
-	//Ñ¡ÔñÅÅĞò
+	//é€‰æ‹©æ’åº
 	@Test
 	public void testSelect(){
 		int[] blos = Arrays.copyOf(array, array.length);
@@ -67,12 +67,12 @@ public class SimpleSort {
 				blos[i] = j;
 			}
 		}
-		System.out.println("Ñ¡ÔñÅÅĞò ×ÜµÄ±È½Ï´ÎÊı"+count);
-		System.out.println("Ñ¡ÔñÅÅĞòÒÆ¶¯´ÎÊı£º "+jihuan);
-		System.out.println("Ñ¡ÔñÅÅĞòÒÆ¶¯´ÎÊı£º "+Arrays.toString(blos));
+		System.out.println("é€‰æ‹©æ’åº æ€»çš„æ¯”è¾ƒæ¬¡æ•°"+count);
+		System.out.println("é€‰æ‹©æ’åºç§»åŠ¨æ¬¡æ•°ï¼š "+jihuan);
+		System.out.println("é€‰æ‹©æ’åºç§»åŠ¨æ¬¡æ•°ï¼š "+Arrays.toString(blos));
 	}
 	
-	//²åÈëÅÅĞò
+	//æ’å…¥æ’åº
 	@Test
 	public void testInsert(){
 		int[] blos = Arrays.copyOf(array, array.length);
@@ -85,18 +85,18 @@ public class SimpleSort {
 				if(blos[j] < linshi){
 					yidong++;
 					blos[j+1] = blos[j];
-					if(j==0){//²åÈëµ½µÚÒ»Î»
+					if(j==0){//æ’å…¥åˆ°ç¬¬ä¸€ä½
 						blos[0] = linshi;
 					}
-				}else{//²åÈëºó½áÊø±¾´ÎÄÚÑ­»·
+				}else{//æ’å…¥åç»“æŸæœ¬æ¬¡å†…å¾ªç¯
 					blos[j+1] = linshi;
 					break;
 				}
 				
 			}
 		}
-		System.out.println("²åÈëÅÅĞò×ÜµÄ±È½Ï´ÎÊı£º"+count);
-		System.out.println("²åÈëÅÅĞò×ÜµÄÒÆ¶¯´ÎÊı " + yidong);
-		System.out.println("²åÈëÅÅĞòÒÆ¶¯´ÎÊı£º "+Arrays.toString(blos));
+		System.out.println("æ’å…¥æ’åºæ€»çš„æ¯”è¾ƒæ¬¡æ•°ï¼š"+count);
+		System.out.println("æ’å…¥æ’åºæ€»çš„ç§»åŠ¨æ¬¡æ•° " + yidong);
+		System.out.println("æ’å…¥æ’åºç§»åŠ¨æ¬¡æ•°ï¼š "+Arrays.toString(blos));
 	}
 }
