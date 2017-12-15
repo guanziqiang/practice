@@ -47,20 +47,19 @@ public class SynStatic {
 	}
 	
 	public static void main(String[] args) {
-		final SynStatic2 static1 = new SynStatic2();
+		final SynStatic static1 = new SynStatic();
 		final SynStatic2 static2 = new SynStatic2();
 		
 		new Thread() {
 			@Override
 			public void run() {
-//				SynStatic.test1();
 				static1.test4();
 			}
 		}.start();
 		new Thread() {
 			@Override
 			public void run() {
-				static1.test42();
+				static1.test4();
 			}
 		}.start();
 	}
