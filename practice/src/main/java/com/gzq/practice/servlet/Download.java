@@ -12,6 +12,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+/**
+ * 文件下载
+ * @author GeYi
+ *
+ */
 public class Download extends HttpServlet{
 	
     /**
