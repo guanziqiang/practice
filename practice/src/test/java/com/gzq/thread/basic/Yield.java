@@ -1,6 +1,7 @@
 package com.gzq.thread.basic;
 
 /**
+ * 验证yield可以让出CPU
  * @author GeYi
  *     public static native void yield();
  * 让当前调用的线程让出CPU，但是不代表之后不再竞争CPU资源。
