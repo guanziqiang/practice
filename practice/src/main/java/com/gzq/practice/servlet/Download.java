@@ -12,9 +12,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+/**
+ * 文件下载
+ * @author GeYi
+ *
+ */
 public class Download extends HttpServlet{
 	
-    public void doGet(HttpServletRequest request, HttpServletResponse response)  
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public void doGet(HttpServletRequest request, HttpServletResponse response)  
             throws ServletException, IOException {  
         downloadChineseFileByOutputStream(response);//下载中文文件  
     }  

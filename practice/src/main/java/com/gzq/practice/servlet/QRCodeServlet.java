@@ -12,6 +12,11 @@ import javax.servlet.http.HttpServletResponse;
 import net.glxn.qrgen.core.image.ImageType;
 import net.glxn.qrgen.javase.QRCode;
 
+/**
+ * 二维码生存
+ * @author GeYi
+ *
+ */
 public class QRCodeServlet extends HttpServlet{
 	  
     /**
