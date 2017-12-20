@@ -1,26 +1,25 @@
 package com.gzq.thread.basic;
 
-import java.lang.Thread.State;
-import java.util.concurrent.ThreadFactory;
-
 public class NewThread {
 	
 	public static void main(String[] args) {
-		//线程的创建和启动
+//==============线程的创建和启动=====================
 //		Thread thread = new Thread();
 //		thread.start();
-//		====================
-		//通过继承Thread实现自己的线程
+		
+//===============通过继承Thread实现自己的线程=================
 //		MyThread myThread = new MyThread();
 //		myThread.start();
-//		=========================
-		//通过实现Runnable实现自己的线程
+		
+//===============通过实现Runnable实现自己的线程=============
 //		Thread thread = new Thread(new MyRunnbale());
 //		thread.start();
-		//验证真实的线程
+		
+//=================验证真实的线程======================
 //		new TureThread().start();
 //		new FalseThread().run();
-		
+
+		//打印主线程结束标志 和 主线程名称
 		System.out.println("main thread name: " + Thread.currentThread().getName());
 		System.out.println("main thread end.");
 	}
