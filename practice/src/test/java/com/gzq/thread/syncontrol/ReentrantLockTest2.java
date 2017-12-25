@@ -7,14 +7,15 @@ import java.util.concurrent.locks.ReentrantLock;
  * lockInterruptibly
  * isHeldByCurrentThread
  * @author GeYi
+ * rL1.lock();这个锁不能够响应中断。
  *
  */
-public class ReentrantTest2 implements Runnable{
+public class ReentrantLockTest2 implements Runnable{
 	public static ReentrantLock rL1 = new ReentrantLock();
 	public static ReentrantLock rL2 = new ReentrantLock();
 	private int type;//根据type值设置实例请求锁的顺序，以便造成锁死。
 	
-	public ReentrantTest2(int type) {
+	public ReentrantLockTest2(int type) {
 		this.type = type;
 	}
 
@@ -24,6 +25,7 @@ public class ReentrantTest2 implements Runnable{
 			try {
 				try {
 					rL1.lockInterruptibly();
+//					rL1.lock();
 					System.out.println(Thread.currentThread().getName() +" 获取了锁1.");
 				} catch (InterruptedException e1) {
 					e1.printStackTrace();
@@ -35,6 +37,7 @@ public class ReentrantTest2 implements Runnable{
 				}
 				try {
 					rL2.lockInterruptibly();
+//					rL2.lock();
 					System.out.println(Thread.currentThread().getName() +" 获取了锁2.");
 				} catch (InterruptedException e) {
 					e.printStackTrace();
@@ -54,6 +57,7 @@ public class ReentrantTest2 implements Runnable{
 			try {
 				try {
 					rL2.lockInterruptibly();
+//					rL2.lock();
 					System.out.println(Thread.currentThread().getName() +" 获取了锁2.");
 				} catch (InterruptedException e1) {
 					e1.printStackTrace();
@@ -65,6 +69,7 @@ public class ReentrantTest2 implements Runnable{
 				}
 				try {
 					rL1.lockInterruptibly();
+//					rL1.lock();
 					System.out.println(Thread.currentThread().getName() +" 获取了锁1.");
 				} catch (InterruptedException e) {
 					e.printStackTrace();
@@ -85,8 +90,8 @@ public class ReentrantTest2 implements Runnable{
 	
 	public static void main(String[] args) throws InterruptedException {
 		
-		ReentrantTest2 reentrantTest21 = new ReentrantTest2(1);
-		ReentrantTest2 reentrantTest22 = new ReentrantTest2(2);
+		ReentrantLockTest2 reentrantTest21 = new ReentrantLockTest2(1);
+		ReentrantLockTest2 reentrantTest22 = new ReentrantLockTest2(2);
 		Thread thread1 = new Thread(reentrantTest21);
 		Thread thread2 = new Thread(reentrantTest22);
 		thread1.start();

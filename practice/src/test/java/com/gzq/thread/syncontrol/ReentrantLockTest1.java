@@ -7,7 +7,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * @author GeYi
  *
  */
-public class ReentrantLockTest implements Runnable{
+public class ReentrantLockTest1 implements Runnable{
 	public static ReentrantLock reentrantLock = new ReentrantLock();
 	public static int count = 0;
 
@@ -26,13 +26,13 @@ public class ReentrantLockTest implements Runnable{
 	}
 	
 	public static void main(String[] args) throws InterruptedException {
-		Thread t1 = new Thread(new ReentrantLockTest());
-		Thread t2 = new Thread(new ReentrantLockTest());
+		Thread t1 = new Thread(new ReentrantLockTest1());
+		Thread t2 = new Thread(new ReentrantLockTest1());
 		t1.start();
 		t2.start();
 		t1.join();
 		t2.join();
-		System.out.println("main end. count = "+ReentrantLockTest.count);
+		System.out.println("main end. count = "+ReentrantLockTest1.count);
 	}
 
 }
