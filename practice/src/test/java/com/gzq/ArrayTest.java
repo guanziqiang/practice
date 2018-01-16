@@ -1,11 +1,14 @@
 package com.gzq;
 
-import java.io.ByteArrayOutputStream;
-
+/**
+ * 测试数组的最大定义长度
+ * @author Administrator
+ *
+ */
 public class ArrayTest {
 	
 	public static void main(String[] args) {
-		long year = Long.MAX_VALUE / 1000 / 60 / 60 /24 /365;
+		String[] year = new String[Integer.MAX_VALUE];//0x7fffffff
 		System.out.println(year);
 	}
 
