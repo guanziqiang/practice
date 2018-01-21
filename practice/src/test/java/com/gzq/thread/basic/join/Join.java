@@ -1,4 +1,4 @@
-package com.gzq.thread.basic;
+package com.gzq.thread.basic.join;
 
 /**
  * 验证join系列三个方法的效果。
@@ -13,13 +13,24 @@ public class Join {
 	public static class AddThread extends Thread{
 		@Override
 		public void run() {
-			for(i=0; i<10000000; i++);
+			for(i=0; i<10000000; i++) {
+			    if(i == 100) {
+			        synchronized (this) {
+                        this.notifyAll();
+                        System.out.println(this.hashCode());
+                        currentThread().notifyAll();
+                        System.out.println(currentThread().hashCode());
+                        break;
+                    }
+			    }
+			};
 			System.out.println("副线程执行完毕，i值为：" + i);
 		}
 	}
 	
 	public static void main(String[] args) {
 		AddThread addThread = new AddThread();
+		System.out.println(addThread.hashCode());
 		addThread.start();
 		//使用与不使用join时打印的i结果时不同的。不使用时，主线程不需要等待副线程执行完成，自己就往下执行了。
 		try {
