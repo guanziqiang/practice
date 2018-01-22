@@ -1,6 +1,11 @@
 package com.gzq.thread.basic.stop;
 
-public class Interrupted {
+/**
+ * 测试interrupt中断情况下interrupted、isInterrupted方法的差别
+ * @author Administrator
+ *
+ */
+public class Interrupt1 {
 
     public static void main(String[] args) throws InterruptedException {
         Thread thread = new Thread() {
@@ -8,8 +13,10 @@ public class Interrupted {
             public void run() {
                 int count = 0;
                 while(true) {
-//                    boolean interrupted = Thread.interrupted();
-                    boolean interrupted = Thread.currentThread().isInterrupted();
+                	//获取并清楚中断状态
+                    boolean interrupted = Thread.interrupted();
+                    //获取但不清楚中断状态
+//                    boolean interrupted = Thread.currentThread().isInterrupted();
                     if(interrupted) {
                         System.out.println("中断状态为真："+interrupted);
                         if(count > 0) {
