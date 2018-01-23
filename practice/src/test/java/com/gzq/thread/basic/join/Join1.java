@@ -6,7 +6,7 @@ package com.gzq.thread.basic.join;
  * 详细解释见：002java线程的基本操作-join方法
  *
  */
-public class Join {
+public class Join1 {
 	
 	public volatile static int i = 0;
 	
@@ -28,7 +28,7 @@ public class Join {
 		}
 	}
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		AddThread addThread = new AddThread();
 		System.out.println(addThread.hashCode());
 		addThread.start();
