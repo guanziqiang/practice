@@ -1,11 +1,11 @@
-package com.gzq.thread.basic.suspend;
+package com.gzq.thread.basic.wait;
 
 /**
  * 验证notify方法的随机唤醒。
  * @author GeYi
  *
  */
-public class WaitNotify2 {
+public class T2WaitNotify {
     public static void main(String[] args) throws InterruptedException {
         Object object = new Object();
         for (int i = 0; i < 30; i++) {

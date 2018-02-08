@@ -1,11 +1,11 @@
 package com.gzq.thread.basic.stop;
 
 /**
- * 测试interrupt中断时下休眠等操作抛出异常的情况
+ * 测试interrupt中断时sleep、wait等操作会抛出异常。
  * @author Administrator
  *
  */
-public class Interrupt2 {
+public class T3InterruptedException {
 	public static void main(String[] args) throws InterruptedException {
 		Thread thread = new Thread() {
 			@Override

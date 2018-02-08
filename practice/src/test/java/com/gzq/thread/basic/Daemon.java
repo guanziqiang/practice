@@ -3,13 +3,10 @@ package com.gzq.thread.basic;
 import java.util.Random;
 
 public class Daemon extends Thread{
-	
-
-	
 	@Override
 	public void run() {
 		while(true) {
-			System.out.println("Daemon is alive.");
+			System.out.println("守护线程");
 			try {
 				Thread.sleep(1000);
 			} catch (InterruptedException e) {

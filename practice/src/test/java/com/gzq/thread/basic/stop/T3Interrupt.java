@@ -5,7 +5,7 @@ package com.gzq.thread.basic.stop;
  * @author Administrator
  *
  */
-public class Interrupt1 {
+public class T3Interrupt {
 
     public static void main(String[] args) throws InterruptedException {
         Thread thread = new Thread() {
@@ -14,9 +14,9 @@ public class Interrupt1 {
                 int count = 0;
                 while(true) {
                 	//获取并清楚中断状态
-                    boolean interrupted = Thread.interrupted();
+//                    boolean interrupted = Thread.interrupted();
                     //获取但不清楚中断状态
-//                    boolean interrupted = Thread.currentThread().isInterrupted();
+                    boolean interrupted = Thread.currentThread().isInterrupted();
                     if(interrupted) {
                         System.out.println("中断状态为真："+interrupted);
                         if(count > 0) {
@@ -35,7 +35,6 @@ public class Interrupt1 {
         thread.start();
         Thread.sleep(1000);//主线程休息两秒后中断副线程
         thread.interrupt();
-        
     }
 
 }

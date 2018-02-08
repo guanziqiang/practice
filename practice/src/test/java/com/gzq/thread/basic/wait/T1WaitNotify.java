@@ -1,11 +1,11 @@
-package com.gzq.thread.basic.suspend;
+package com.gzq.thread.basic.wait;
 
 /**
  * 验证wait、notify方法都需要synchronized监视当前的方法调用的对象。
  * @author GeYi
  *
  */
-public class WaitNotify1 {
+public class T1WaitNotify {
     public static void main(String[] args) {
         Object object = new Object();
         Object object2 = new Object();
