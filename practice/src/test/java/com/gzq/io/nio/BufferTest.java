@@ -23,6 +23,9 @@ public class BufferTest {
         
     }
     
+    /**
+     * 测试asReadOnlyBuffer()方法
+     */
     @Test
     public void testAsReadOnlyBuffer(){
         ByteBuffer asReadOnlyBuffer = allocate.asReadOnlyBuffer();

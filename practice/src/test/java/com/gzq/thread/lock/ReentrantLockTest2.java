@@ -97,7 +97,7 @@ public class ReentrantLockTest2 implements Runnable{
 		thread1.start();
 		thread2.start();
 		Thread.sleep(4000);
-		thread2.interrupt();
+//		thread2.interrupt();
 		
 	}
 	
