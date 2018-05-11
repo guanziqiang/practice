@@ -20,11 +20,7 @@ public class TransactionTestServiceImpl implements TransactionTestService{
     private AccountDAO accountDAO;
     @Autowired
     private GoodsDAO goodsDAO;
-    
-    public TransactionTestServiceImpl() {
-        System.out.println("service 的构造器");
-    }
-    
+
     @Transactional(propagation=Propagation.REQUIRED,rollbackFor=Exception.class)
     public void test1() throws Exception {
         //AccountDO accountDO = accountDAO.get();

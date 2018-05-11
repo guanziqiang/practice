@@ -45,8 +45,12 @@
     <property name="dataSource" ref="datasource" />
   </bean>
   
-  <bean init-method="" destroy-method=""></bean>
-
   <tx:annotation-driven transaction-manager="dataSourceTransactionManager" />
-
+  
+  <bean class="com.gzq.practice.spring.MyBeanPostProcessor"></bean>
+  
+    <bean id="beanLifeTestController" 
+    class="com.gzq.practice.spring.controller.BeanLifeTestController"
+    init-method="init" destroy-method="destroy"></bean>
+  
 </beans>
