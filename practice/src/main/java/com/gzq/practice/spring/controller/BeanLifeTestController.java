@@ -12,9 +12,9 @@ public class BeanLifeTestController implements InitializingBean{
         System.out.println("bean生命周期 1，调用构造器");
     }
     
-    @RequestMapping("/t1")
-    public Object test1() {
-        return "success";
+    
+    public void init0() {
+        
     }
     
     public void init() {
