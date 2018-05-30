@@ -109,6 +109,10 @@
 		<property name="maxUploadSize" value="1048576"></property>
 	</bean>
 
-
+  
+    <bean id="beanLifeTestController" 
+    class="com.gzq.practice.spring.controller.BeanLifeTestController"
+      init-method="init2" destroy-method="destroy2"></bean>
+  
 
 </beans>

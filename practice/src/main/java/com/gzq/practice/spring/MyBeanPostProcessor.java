@@ -3,6 +3,11 @@ package com.gzq.practice.spring;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 
+/**
+ * bean生命周期中的后置处理器
+ * @author Administrator
+ *
+ */
 public class MyBeanPostProcessor implements BeanPostProcessor{
 
     @Override
