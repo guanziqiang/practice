@@ -21,7 +21,7 @@ public class TransactionTestServiceImpl implements TransactionTestService{
     @Autowired
     private GoodsDAO goodsDAO;
 
-    @Transactional(propagation=Propagation.REQUIRED,rollbackFor=Exception.class)
+    @Transactional(propagation=Propagation.REQUIRED)
     public void test1() throws Exception {
         //AccountDO accountDO = accountDAO.get();
         
@@ -41,7 +41,12 @@ public class TransactionTestServiceImpl implements TransactionTestService{
 //                System.out.println("test1 捕获自己的异常");
 //                e.printStackTrace();
 //            }
-            throw new Exception("test1抛出可检查性异常"); // 默认情况下 可检查的Exception 不自动回滚
+//            throw new Exception("test1抛出可检查性异常"); // 默认情况下 可检查的Exception 不自动回滚
+//            try {
+                throw new Error("test1抛出的Error异常");
+//            } catch (Error e) {
+//                System.out.println("test1捕获自己的Error异常");
+//            }
         }
         
     }

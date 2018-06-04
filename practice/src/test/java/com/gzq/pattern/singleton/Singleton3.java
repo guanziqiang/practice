@@ -6,16 +6,16 @@ package com.gzq.pattern.singleton;
  * @author zhangxin
  *
  */
-public class M3Singleton {
-    private M3Singleton() {
+public class Singleton3 {
+    private Singleton3() {
         System.out.println("Singleton pattern private constructor");
     }
 
     private static class SingletonHolder {
-        private static M3Singleton instance = new M3Singleton();
+        private static Singleton3 instance = new Singleton3();
     }
 
-    public static M3Singleton getInstance() {
+    public static Singleton3 getInstance() {
         return SingletonHolder.instance;
     }
     
@@ -25,8 +25,8 @@ public class M3Singleton {
 
     @SuppressWarnings("unused")
     public static void main(String[] args) {
-        M3Singleton.test();
-        M3Singleton instance = M3Singleton.getInstance();
+        Singleton3.test();
+        Singleton3 instance = Singleton3.getInstance();
     }
 
 }

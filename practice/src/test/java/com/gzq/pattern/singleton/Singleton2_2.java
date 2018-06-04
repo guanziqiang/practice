@@ -5,22 +5,22 @@ package com.gzq.pattern.singleton;
  * @author zhangxin
  *
  */
-public class M2_2Singleton {
-    private M2_2Singleton() {
+public class Singleton2_2 {
+    private Singleton2_2() {
         System.out.println("Singleton pattern private constructor");
     }
     
-    private volatile static M2_2Singleton instance = null;
+    private volatile static Singleton2_2 instance = null;
     
     /**
      * @return
      */
-    public synchronized static M2_2Singleton getInstance() {
+    public synchronized static Singleton2_2 getInstance() {
         //只有null时才加锁
         if(instance == null) {
-            synchronized (M2_2Singleton.class) {
+            synchronized (Singleton2_2.class) {
                 if(instance == null) {
-                    return instance = new M2_2Singleton();
+                    return instance = new Singleton2_2();
                 }
             }
         }

@@ -5,7 +5,7 @@ package com.gzq.pattern.singleton;
  * @author zhangxin
  *
  */
-public enum M4Singleton {
+public enum Singleton4 {
     INSTANCE;//天生的单例
     
     private String name = "enumName";
@@ -15,8 +15,8 @@ public enum M4Singleton {
     }
     
     public static void main(String[] args) {
-       M4Singleton.INSTANCE.getInstance();
-       System.out.println(M4Singleton.INSTANCE.name);
+       Singleton4.INSTANCE.getInstance();
+       System.out.println(Singleton4.INSTANCE.name);
     }
 }
 

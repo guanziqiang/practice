@@ -5,16 +5,16 @@ package com.gzq.pattern.singleton;
  * @author zhangxin
  *
  */
-public class M2_1Singleton {
-    private M2_1Singleton() {
+public class Singleton2_1 {
+    private Singleton2_1() {
         System.out.println("Singleton pattern private constructor");
     }
     
-    private static M2_1Singleton instance = null;
+    private static Singleton2_1 instance = null;
     
-    public synchronized static M2_1Singleton getInstance() {
+    public synchronized static Singleton2_1 getInstance() {
         if(instance == null) {
-            return instance = new M2_1Singleton();
+            return instance = new Singleton2_1();
         }else {
             return instance;
         }

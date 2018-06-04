@@ -5,15 +5,15 @@ package com.gzq.pattern.singleton;
  * @author zhangxin
  *
  */
-public class M1Singleton {
+public class Singleton1 {
     
-    private M1Singleton() {
+    private Singleton1() {
         System.out.println("Singleton pattern private constructor");
     }
     
-    private static M1Singleton instance = new M1Singleton();
+    private static Singleton1 instance = new Singleton1();
     
-    public static M1Singleton getInstance() {
+    public static Singleton1 getInstance() {
         return instance;
     }
 
