@@ -13,7 +13,7 @@
     <java-version>1.8</java-version>
     <org.springframework-version>4.1.6.RELEASE</org.springframework-version>
     <logging.log4j>2.6.2</logging.log4j>
-    <java.home>D:\software\java\java1.7.0_79\jdk</java.home>
+    <java.home>D:\software\java\Java1.8.0_112\jdk</java.home>
     <slf4j.version>1.7.21</slf4j.version>
   </properties>
 
@@ -351,6 +351,11 @@
         <filtering>false</filtering>
       </resource>
     </resources>
+    <testResources>
+      <testResource>
+        <directory>src/test/java</directory>
+      </testResource>
+    </testResources>
 
     <plugins>
       <plugin>
