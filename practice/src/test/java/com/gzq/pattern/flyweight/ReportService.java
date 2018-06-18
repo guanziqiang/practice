@@ -1,4 +1,5 @@
-package com.gzq.pattern.flyweight.v1;
+package com.gzq.pattern.flyweight;
+
 
 public interface ReportService {
     

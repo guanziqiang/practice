@@ -1,4 +1,4 @@
-package com.gzq.pattern.flyweight.v1;
+package com.gzq.pattern.flyweight;
 
 public class EmployeeReportServiceImpl implements ReportService{
 

@@ -1,4 +1,4 @@
-package com.gzq.pattern.flyweight.v1;
+package com.gzq.pattern.flyweight;
 
 public class FinancialReportServiceImpl implements ReportService{
 
@@ -10,7 +10,7 @@ public class FinancialReportServiceImpl implements ReportService{
     
     @Override
     public String createReport() {
-        return company + "公司的财务报表。";
+        return company + " 公司的财务报表。";
     }
 
     @Override
