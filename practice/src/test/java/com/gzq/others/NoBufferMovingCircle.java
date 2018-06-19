@@ -7,8 +7,6 @@ import java.awt.Image;
 
 import javax.swing.JApplet;
 
-import org.apache.tools.ant.taskdefs.Move;
-
 public class NoBufferMovingCircle extends JApplet implements Runnable{
     
     Image screenImage = null;

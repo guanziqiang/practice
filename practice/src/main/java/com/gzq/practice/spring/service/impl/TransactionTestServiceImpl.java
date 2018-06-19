@@ -1,6 +1,5 @@
 package com.gzq.practice.spring.service.impl;
 
-import org.springframework.aop.framework.AopContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Isolation;
@@ -9,8 +8,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.gzq.practice.spring.dao.AccountDAO;
 import com.gzq.practice.spring.dao.GoodsDAO;
-import com.gzq.practice.spring.entities.AccountDO;
-import com.gzq.practice.spring.entities.GoodsDO;
 import com.gzq.practice.spring.service.TransactionTestService;
 
 @Service

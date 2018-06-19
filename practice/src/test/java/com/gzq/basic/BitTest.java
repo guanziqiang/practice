@@ -2,9 +2,6 @@ package com.gzq.basic;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.concurrent.ThreadPoolExecutor;
-
-import org.junit.Test;
 
 public class BitTest {
     

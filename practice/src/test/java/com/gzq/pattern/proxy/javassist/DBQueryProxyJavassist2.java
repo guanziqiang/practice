@@ -1,9 +1,5 @@
 package com.gzq.pattern.proxy.javassist;
 
-import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.List;
-
 import javassist.CannotCompileException;
 import javassist.ClassPool;
 import javassist.CtClass;
