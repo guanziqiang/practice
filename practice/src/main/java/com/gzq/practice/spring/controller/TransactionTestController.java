@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.gzq.practice.spring.service.TransactionTestService;
 
 /**
- * 测试spring的事务
+ * 测试spring的事务，关联类{@code com.gzq.practice.spring.service.TransactionTestService} {@code com.gzq.practice.spring.service.impl.TransactionTestServiceImpl}
  * @author Administrator
  *
  */

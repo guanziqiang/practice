@@ -13,7 +13,7 @@ import net.glxn.qrgen.core.image.ImageType;
 import net.glxn.qrgen.javase.QRCode;
 
 /**
- * 二维码生存
+ * 二维码生成
  * @author GeYi
  *
  */
