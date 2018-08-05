@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * -Xoos设置本地方法栈大小，但在hotspot虚拟机中不区分虚拟机栈和本地方法栈，因此改参数是无效的。
- * -Xss 设置虚拟机栈大小。
+ * -Xss 设置每个线程虚拟机栈大小。
     *  主要测试java.lang.StackOverflowError异常的抛出。
  * @author Administrator
  *
