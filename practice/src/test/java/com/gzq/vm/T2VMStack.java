@@ -6,6 +6,7 @@ import java.util.List;
 /**
  * -Xoos设置本地方法栈大小，但在hotspot虚拟机中不区分虚拟机栈和本地方法栈，因此改参数是无效的。
  * -Xss 设置虚拟机栈大小。
+    *  主要测试java.lang.StackOverflowError异常的抛出。
  * @author Administrator
  *
  */
@@ -15,9 +16,9 @@ public class T2VMStack {
     
     public void stackLeak() {
         stackLength++;
-        stackLeak();
+        stackLeak();//
         /*
-         *   运行下面代码抛出GC overhead limit exceeded异常 
+         *   运行下面代码抛出GC overhead limit exceeded异常，目前不知道什么意思 
          */
 //        while(true) {
 //            list.add(new String("neicun"));
